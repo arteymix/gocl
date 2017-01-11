@@ -341,7 +341,7 @@ read_all (GoclBuffer          *self,
  * @context: A #GoclContext to attach the buffer to
  * @flags: An OR'ed combination of values from #GoclBufferFlags
  * @size: The size of the buffer, in bytes
- * @host_ptr: (allow-none) (type guint64): A pointer to memory in the host system, or %NULL
+ * @host_ptr: (allow-none): A pointer to memory in the host system, or %NULL
  *
  * Creates a new buffer on context's memory. Depending on flags, the @host_ptr pointer can be
  * used to initialize the contents of the buffer from a block of memory in the host.
