@@ -76,27 +76,27 @@ GoclDevice *           gocl_context_get_device_by_index        (GoclContext *sel
 GoclContext *          gocl_device_get_context                 (GoclDevice *device);
 
 /* GoclBuffer headers */
-GoclBuffer *           gocl_buffer_new                         (GoclContext *context,
-                                                                guint        flags,
-                                                                gsize        size,
-                                                                gpointer     host_ptr);
+GoclBuffer *           gocl_buffer_new                         (GoclContext     *context,
+                                                                GoclBufferFlags  flags,
+                                                                gsize            size,
+                                                                gpointer         host_ptr);
 GoclContext *          gocl_buffer_get_context                 (GoclBuffer *buffer);
 
 /* GoclImage headers */
-GoclImage *            gocl_image_new                          (GoclContext   *context,
-                                                                guint          flags,
-                                                                gpointer       host_ptr,
-                                                                GoclImageType  type,
-                                                                gsize          width,
-                                                                gsize          height,
-                                                                gsize          depth);
-GoclImage *            gocl_image_new_from_gl_texture          (GoclContext *context,
-                                                                guint        flags,
-                                                                guint        texture);
+GoclImage *            gocl_image_new                          (GoclContext     *context,
+                                                                GoclBufferFlags  flags,
+                                                                gpointer         host_ptr,
+                                                                GoclImageType    type,
+                                                                gsize            width,
+                                                                gsize            height,
+                                                                gsize            depth);
+GoclImage *            gocl_image_new_from_gl_texture          (GoclContext     *context,
+                                                                GoclBufferFlags  flags,
+                                                                guint            texture);
 #ifdef HAS_COGL
-GoclImage *            gocl_image_new_from_cogl_texture        (GoclContext *context,
-                                                                guint        flags,
-                                                                CoglTexture *texture);
+GoclImage *            gocl_image_new_from_cogl_texture        (GoclContext     *context,
+                                                                GoclBufferFlags  flags,
+                                                                CoglTexture     *texture);
 #endif
 
 G_END_DECLS
